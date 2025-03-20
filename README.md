@@ -2,4 +2,4 @@
 
 Link to Metropolia's personal home directory:
 
-[Home directory] (https://users.metropolia.fi/~tonykar/Web-Software-Development/)
+[Home directory](https://users.metropolia.fi/~tonykar/Web-Software-Development/)
