@@ -15,4 +15,6 @@ function triangleType(a, b, c) {
 if (a !== null && b !== null && c !== null) {
   document.getElementById('result').innerHTML =
     'Triangle type: ' + triangleType(a, b, c);
+} else {
+  document.getElementById('result').innerHTML = 'Please enter valid values';
 }
