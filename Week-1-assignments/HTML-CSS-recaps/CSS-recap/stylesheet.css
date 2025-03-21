@@ -1,0 +1,60 @@
+body {
+  font-family: Helvetica, sans-serif;
+  color: white;
+  background-color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+.container a {
+  text-decoration: none;
+  color: rgb(207, 255, 35);
+}
+.container a:hover {
+  color: #48c5ff;
+}
+
+/*.container a:visited {
+  color: #8501a9;
+}*/
+
+.container img {
+  border-radius: 0.5rem;
+  border: rgb(149, 149, 149) 4px solid;
+}
+
+h2 {
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+th {
+  padding-right: 0.5rem;
+}
+
+td {
+  padding-right: 0.5rem;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  color: rgb(0, 0, 0);
+  list-style-type: square;
+  list-style: inside;
+}
+
+ul li,
+ol li {
+  padding-left: 0.5rem;
+}
+
+ul li:nth-child(odd),
+ol li:nth-child(odd) {
+  background-color: #00bedb;
+}
+
+ul li:nth-child(even),
+ol li:nth-child(even) {
+  background-color: #21ff19;
+}
