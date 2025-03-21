@@ -1,0 +1,26 @@
+{
+  "name": "web-software-development",
+  "version": "1.0.0",
+  "description": "Link to Metropolia's personal home directory:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TonyKarlin/Web-Software-Development.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TonyKarlin/Web-Software-Development/issues"
+  },
+  "homepage": "https://github.com/TonyKarlin/Web-Software-Development#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0"
+  }
+}
