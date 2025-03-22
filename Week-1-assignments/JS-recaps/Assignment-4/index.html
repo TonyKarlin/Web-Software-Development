@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Grade Calculator</h1>
+    <ol>
+      <li>Scores between 0 and 39 receive a grade of 0.</li>
+      <li>Scores between 40 and 51 receive a grade of 1.</li>
+      <li>Scores between 52 and 63 receive a grade of 2.</li>
+      <li>Scores between 64 and 75 receive a grade of 3.</li>
+      <li>Scores between 76 and 87 receive a grade of 4.</li>
+      <li>Scores between 88 and 100 receive a grade of 5.</li>
+    </ol>
+    <label for="score">Enter your score:</label>
+    <input type="number" id="score" />
+    <button onclick="calculateGrade()">Calculate Grade</button>
+    <br />
+    <p id="result">No scores submitted.</p>
+  </body>
+</html>
