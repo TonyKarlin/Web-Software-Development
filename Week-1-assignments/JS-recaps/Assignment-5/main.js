@@ -8,9 +8,11 @@ function summation(n) {
   return sum;
 }
 
-document.getElementById('input').innerHTML = `You entered: ${userInput}`;
+if (userInput === '' || userInput === null) {
+  document.getElementById('input').innerHTML = 'You entered nothing!';
+} else document.getElementById('input').innerHTML = `You entered: ${userInput}`;
 
-if (!isNaN(userInput) && userInput !== null) {
+if (!isNaN(userInput) && userInput !== null && userInput !== '') {
   if (userInput < 0) {
     document.getElementById('result').innerHTML =
       'Please enter a positive integer!';
