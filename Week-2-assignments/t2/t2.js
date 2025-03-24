@@ -28,3 +28,23 @@ const todoList = [
 ];
 
 // add your code here
+
+const elm = document.getElementById('todo-list');
+
+for (let i = 0; i < todoList.length; i++) {
+  const list = document.createElement('li');
+  elm.appendChild(list);
+
+  const checkBox = document.createElement('input');
+  checkBox.type = 'checkbox';
+  checkBox.id = `check-${i + 1}`;
+  if (todoList[i].completed) {
+    checkBox.checked = true;
+  }
+  list.appendChild(checkBox);
+
+  const htmlLabel = document.createElement('label');
+  htmlLabel.innerHTML = todoList[i].task;
+  htmlLabel.htmlFor = `todo-${i + 1}`;
+  list.appendChild(htmlLabel);
+}
