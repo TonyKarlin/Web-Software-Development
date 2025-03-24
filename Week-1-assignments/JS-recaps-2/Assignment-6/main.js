@@ -1,17 +1,14 @@
-const favouriteMovies = [
-  {
-    title: '',
-    rating: null,
-  },
-];
+const favouriteMovies = [];
 
 const numberOfMovies = prompt('How many movies do you want to add?');
 const amount = parseInt(numberOfMovies);
 
 while (favouriteMovies.length < amount) {
-  favouriteMovies.title = prompt('Enter the title of your favourite movie:');
-  favouriteMovies.rating = prompt('Enter the rating of your favourite movie:');
-  favouriteMovies.push(favouriteMovies);
+  const movie = {
+    title: prompt('Enter the title of your favourite movie:'),
+    rating: parseFloat(prompt('Enter the rating of your favourite movie:')),
+  };
+  favouriteMovies.push(movie);
 }
 
 const descendingOrder = favouriteMovies.sort((a, b) => b.rating - a.rating);
@@ -25,8 +22,11 @@ const h1Element = document.createElement('h1');
 h1Element.textContent = `The highest rated movie is: ${highestRated.title} with a rating of ${highestRated.rating}`;
 divElement.appendChild(h1Element);
 
-const movieList = document.createElement('p');
+const movieList = document.createElement('or');
 for (let i = 0; i < favouriteMovies.length; i++) {
-  movieList.textContent += `${favouriteMovies[i].title} - ${favouriteMovies[i].rating}`;
+  const listItem = document.createElement('li');
+  listItem.textContent += `${favouriteMovies[i].title} - ${favouriteMovies[i].rating}\n`;
+  movieList.appendChild(listItem);
 }
+
 divElement.appendChild(movieList);
