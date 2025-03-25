@@ -28,3 +28,24 @@ const todoList = [
 ];
 
 // add your code here
+
+const ul = document.getElementById('todo-list');
+const btn = document.getElementsByClassName('add-btn');
+
+for (let i = 0; i < todoList.length; i++) {
+  const list = document.createElement('li');
+  ul.appendChild(list);
+
+  const checkBox = document.createElement('input');
+  checkBox.type = 'checkbox';
+  checkBox.id = `check-${i + 1}`;
+  if (todoList[i].completed) {
+    checkBox.checked = true;
+  }
+  list.appendChild(checkBox);
+
+  const htmlLabel = document.createElement('label');
+  htmlLabel.innerText = todoList[i].task;
+  htmlLabel.htmlFor = `todo-${i + 1}`;
+  list.appendChild(htmlLabel);
+}

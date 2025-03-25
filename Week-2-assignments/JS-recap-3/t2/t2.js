@@ -44,7 +44,7 @@ for (let i = 0; i < todoList.length; i++) {
   list.appendChild(checkBox);
 
   const htmlLabel = document.createElement('label');
-  htmlLabel.innerHTML = todoList[i].task;
+  htmlLabel.innerText = todoList[i].task;
   htmlLabel.htmlFor = `todo-${i + 1}`;
   list.appendChild(htmlLabel);
 }
