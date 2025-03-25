@@ -771,3 +771,55 @@ const restaurants = [
 ];
 
 // your code here
+
+restaurants.sort((a, b) => {
+  return a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1;
+});
+
+function displayRestaurants(restaurants) {
+  const table = document.querySelector('table');
+  const modal = document.querySelector('#modal');
+
+  let previousHighlight;
+
+  restaurants.forEach((restaurant) => {
+    const tr = document.createElement('tr');
+    tr.addEventListener('click', () => {
+      if (previousHighlight) {
+        previousHighlight.classList.remove('highlight');
+      }
+      console.log(restaurant.name);
+      tr.classList.add('highlight');
+      previousHighlight = tr;
+
+      modal.innerHTML = '';
+      modal.showModal();
+      const modalHeader = document.createElement('h2');
+      modalHeader.innerText = restaurant.name;
+      modal.appendChild(modalHeader);
+      const modalParagraph = document.createElement('p');
+      modalParagraph.innerText = `Address: ${restaurant.address}\n
+        Postal Code: ${restaurant.postalCode}\n
+        City: ${restaurant.city}\n
+        Phone nr: ${restaurant.phone}\n
+        Company: ${restaurant.company}`;
+      modal.appendChild(modalParagraph);
+    });
+
+    const nameData = document.createElement('td');
+    nameData.innerText = restaurant.name;
+
+    const addressData = document.createElement('td');
+    addressData.innerText = restaurant.address;
+
+    const city = document.createElement('td');
+    city.innerText = restaurant.city;
+
+    tr.appendChild(nameData);
+    tr.appendChild(addressData);
+    tr.appendChild(city);
+    table.appendChild(tr);
+  });
+}
+
+displayRestaurants(restaurants);
